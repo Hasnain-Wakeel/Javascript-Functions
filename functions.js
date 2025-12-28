@@ -64,50 +64,81 @@
 // }
 // greetUser();
 
+// ------------------------------------------------------------------------------------------------------
+
+// ----------------------------- Creating Dynamic Function : -------------------------
+
+
+// function sum() {
+//   console.log(5 + 10); // We created a User Defined Function which adds up '5 and 10' when we call it.
+// }
+
+// sum(); // This function is only able to sum 5 and 10.
+
+// -------------------------
+
+// ----------------- NOW, we want that we make This Function, Dynamic : ----------------
+// ------------ Our focus is that we provide '2' values every time to the function for adding them ----------
+// -------- This is possible with passing the values through Parameters and Arguments : --------
+
+
+// ------------------------------ A DYNAMIC USER-DEFINED FUNCTION : -----------------------------
+
+// function sum(a, b) {       // we pass parameters in the parenthesis of the Function.
+//   console.log(`Function Invoked => ${a + b}`);
+// }
+
+// sum(10, 11);  // we pass arguments in the parenthesis of the function at the time of Invocation (invoking the function).
+// sum(21, 4);
+// sum(11, 16);
+
+// -------------------  Explaining the Upper Function : -----------------------
+
+// We passed 2 parameters (variables) 'a and b' in the parenthesis of the function and inside function body, we   
+// used these parameters. The values of these variables (parameters) are Dynamic, means that Every Next Time 
+// we call the function, we have to pass the values of these 2 variables (parameters) in the Arguments  of the
+// Function.
+
+// Question : An amazing question is coming in my mind, which is : What will be the answer/output if we did not pass 
+// any value in the arguments at the time of Invoking the Function ??
+
+// sum();        // This will answer "NaN" --> The value of bith variables is (by-default) "undefined" and :
+//                                      Undefined + Undefined = NaN  
+
+
 // --------------------------- More About Functions in JavaScript -----------------------------
 
 // -------------- Passing Data To Functions Through Arguments : ---------------
 
-// let greeting = "Hello, there";
+// let greeting = "Come In!";
 
-// function greetUser(greet){
-//   console.log(greet)
-//   console.log("What's going on ??")
+// function greetUser(message){
+//   console.log(message + ", " + greeting);
+//   console.log("What's going on ?? " + message);
 // }
 
 // greetUser("Welcome!");
+// // greetUser(greeting);
 
+// ----------------------------- Sending/Passing Values Through Parameters : --------------------------
 
-// Expalining Process Of Execution Of The Function :
-
-//      1. Function called at Line 92    --->        {"Welcome!" assigned as, greet's value (parameter)}
-//      2. Inside the function           --->        greet => Welcome! (value of greet is Welcome!)
-//      3. console.log     (greet -> (Welcome!))     will print.
-//      4. console.log     ("What's going on ??")    will print.
-
-// ------------------------- Passing Values Through Variables : -------------------------
-
-// let sayWelcome = "Welcome!";
-// let sayHello = "Hello!";
-// let sayGoodbye = "Goodbye!";
-
-// function greetUser(sayHello){
-//     console.log(sayHello)
-// }
-// greetUser(sayWelcome);
-// greetUser(sayHello);
-// greetUser(sayGoodbye);
-
-// let greeting = "Hello, there";
-// let welcome = "Welcome!";
-
-// function greetUser(greeting) {
-//   alert(welcome);
-//   alert(greeting);
+// function greetUser(message) {
+//   console.log("Function Called => Hi " + message);
 // }
 
-// greetUser("Hello, there.");
-// greetUser("Welcome!");
+// greetUser("Hello, there");      // This value will assign to the 'message' variable, which is a Parameter.
+// greetUser("Welcome!");          // This value will also assign to the 'message' variable, which is a Parameter.
+
+// --------------------- Greeting User : ------------------
+
+// let greet = "Welcome!";
+
+// function greetUser(userName){
+//   console.log(`Hi "${userName}!", ${greet}`);
+// }
+
+// greetUser(prompt("Enter Username :"));
+// // greetUser("Hamza");
 
 // ------------------------------ Passing Data Through Arguments and Parameters ----------------------------
 
