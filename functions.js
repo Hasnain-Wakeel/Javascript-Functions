@@ -108,17 +108,35 @@
 
 // --------------------------- More About Functions in JavaScript -----------------------------
 
-// -------------- Passing Data To Functions Through Arguments : ---------------
+// -------------- Passing Data To Functions Through Arguments (Revising Previous Concept) : ---------------
 
-// let greeting = "Come In!";
+// let greeting = "Hello!";
 
 // function greetUser(message){
 //   console.log(message + ", " + greeting);
-//   console.log("What's going on ?? " + message);
+//   console.log(greeting + " What's going on ??");        
 // }
 
 // greetUser("Welcome!");
-// // greetUser(greeting);
+// greetUser(greeting);
+
+
+// ------------------- Explaining Working of this Function : -------------------
+
+// First we declare a variable having value : "Hello!", then we created a Function in which there is a parameter 
+// (message) which is receiving some value through the Function Argument. So, any of the value we will pass in the
+// function argument (i.e : Welcome!) , then this value will store in the function parameter (variable) 
+// (i.e : message = Welcome!) and after that we are using the 'message' variable inside the function. 
+// Therefore, everywhere we are using 'message' variable will be replace by its value "Welcome!".       
+
+// 1. Calling the function 1st time, we are giving an argument (Welcome!) to it so it will print : 
+// Welcome!, Hello! 
+// Hello! + What's going on ??
+
+// 2. Calling the function 2nd time, we are giving another argument (Hello! (which is the value of variable)) to it,
+// so it will print :
+// Hello!, Hello!
+// Hello!, What's going on ??
 
 // ----------------------------- Sending/Passing Values Through Parameters : --------------------------
 
