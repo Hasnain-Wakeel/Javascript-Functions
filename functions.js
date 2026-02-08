@@ -174,16 +174,13 @@
 
 // So, here is a safe approach (giving Default Parameteers) : (Default values to the variables) :
 
-
 // function sum(num1 = 0, num2 = 0) {      // Parameters
 //   console.log(num1 + num2);
 // }
 
 // sum();       // 0
 
-
 // ------------------  IF WE STRICTLY WANT VALUES IN FUNCTION ARGUMENTS :  ---------------------
-
 
 // ------------------ Wrong Approach (Wrong Condition) ---------------------
 
@@ -197,7 +194,6 @@
 
 // sum();      // if values are not passed in arguments then num_1 and num_2 will become undefined, not ""
 //                            // that's why our if block is not executing.
-
 
 // ----------------- Correct Approch (Correct Condition) -------------------
 
@@ -213,14 +209,12 @@
 
 // sum(11,4);
 
-
 // ---------------------- Missing A Parameter :  --------------------
 
 // function sum(num1) {
 //   console.log(num1 + num2);
 // }
 // sum(2, 4);        // This throws an error that 'num2 is not defined' --> (num2 is not given/defined in parameters).
-
 
 // --------------------  Missing Arguments : -------------------
 
@@ -230,9 +224,7 @@
 // sum(2);           // Since value of num2 is not given, So by-defaultly Js gives it a value : 'Undefined'.
 //                               // and we know that undefined + number = NaN
 
-
 // Js Type Conversion  --->  2 + (Number(undefined)) -->  2 + NaN  =>  NaN
-
 
 // ------------  Default Parameters : -----------
 
@@ -242,7 +234,6 @@
 
 // sum(5);          // num 1 is 5, num2 is 0 -->  5 + 0 = 5.
 
-
 // ------------  "OR"  ------------
 
 // function sum(num1, num2 = 9) {
@@ -251,15 +242,144 @@
 
 // sum(8);     // num 1 is 8, num2 is 9 -->  8 + 9 = 17.
 
-
 // -------------------------------------------------------------------------------------------------------
 
-
-// ----------------------  Replacing/Repositioning the Parameters/Arguments  -------------------
+// -----------  Javascript's Position Based Mapping (of parameters and arguments) : ----------
 
 // function Subtract(num1, num2){
-//   console.log(num2 - num1)          // num1 -> 4, num2 -> 6  ==>  num2 - num1  ==>  6-4  ==>  2
+//   console.log(num2 - num1)
 // }
-// Subtract(4, 6);
 
-// -----------------------
+// Subtract(4, 6);         // num1 -> 4 , num2 -> 6  => num2 - num1  => 6 - 4  => 2
+
+// 1. In JavaScript, function arguments are assigned to parameters based on their position, not their names.
+// 2. The first argument goes to the first parameter, the second argument goes to the second parameter, and so on.
+
+// One Rule To Remember :
+
+// Arguments and Parameters mapping is positional, not nominal.
+
+// ------------- Another Example : ---------------
+
+// Even if we remane the variables :
+
+// function test(a, b) {
+//   console.log(a, b);
+// }
+// test(10, 20);
+
+// function test(x, y) {
+//   console.log(x, y);
+// }
+// test(10, 20);
+
+// ------------------------
+
+// =============================== 'return' Keyword in JavaScript ===============================
+
+
+// function sum(num_1, num_2) {
+//   console.log(num_1 + num_2);
+// }
+
+// console.log(sum(1, 2));
+
+// The inner console is printing the value (answer), but the outer console is printing `undefined`.
+
+// This happens because when the function is called, the `console.log()` inside the function prints the result,
+// and the function itself does not return any value So it returns `undefined` by default.
+
+// So, the inner console prints the answer, and the outer console prints `undefined`.
+
+// function sum(num_1, num_2) {
+//   console.log(num_1 + num_2);
+//   // console.log(1 + 2);
+// }
+
+// Inner console prints '3'.
+// Outer console prints 'undefined', because the function is not returning any value by itself.
+
+// console.log(sum(1, 2));          // 3
+// // console.log(undefined);       // undefined
+
+// Output :
+
+// 1. 3
+// 2. undefined
+
+
+// ------------------------------------------------------------------------------------------------
+
+// ======================  Return Kyeword In More Deep : =====================
+
+// function sum(num_1, num_2) {
+//   console.log(num_1 + num_2);
+// }
+
+// // sum(1, 2);                   // Invoking the function normally.
+// console.log(sum(1, 2));         // Printing / taking the value returned by the function.
+
+
+// Explaining The Return Keyword In JavaScript :
+
+// The above line prints the answer (3) and then `undefined`.
+// This happens because when the function is called, the `console.log()` inside the function
+// prints the result, but the function itself does not return any value.
+// When a function does not explicitly return a value, JavaScript automatically returns `undefined`.
+// Therefore, `3` is printed from inside the function, and `undefined` is printed by the outer `console.log()`.
+
+// Here, explicitly means: By our-self / clearly.
+// "function does not explicitly return a value" means that function is not returning a value by itself.
+
+// "function does not explicitly return a value" means that: 
+// Function ke andar hum ne khud return likh kar koi value wapas nahi bheji.
+
+
+// Let's learn it from an example :
+
+// function sum(a, b) {
+//   console.log(a + b);
+// }
+// sum();
+
+// Since, there is no 'return' keyword inside the function, that's why the function explicitly returns 'undefined'.
+
+
+// ----------------  Returning Value Explicitly : ------------------
+
+// function sum(a, b) {
+//   return a + b;
+// }
+// sum(1, 2);
+
+// Here, we explicitly defines that return this value (i.e : a + b).
+// Yahan hum ne clearly / explicitly bataya hai kay ye function 'a + b' return karega.
+
+
+// ------------------------------------------------------------------------------------------------------
+
+// ====================  CORE CONCEPTS FOR RETURN KEYWORD : =====================
+
+// The main point is that if we want to use the result of a function
+// outside the function, we need to use the "return" keyword inside it.
+
+// The return keyword sends a value back from the function.
+// If a function does not have a return statement, it returns undefined by default.
+
+// Another important point is that when JavaScript reaches the return statement,
+// the function stops executing at that point.
+// Any code written after the return statement will not run.
+
+
+// -----------------------------------------------------------------------------------------------------
+
+
+function addition(a, b){
+   return a + b;
+}
+console.log(addition(7, 10));
+
+// Now, the of the 
+// Now, the above line prints the value returned by the function, which is 17.
+
+
