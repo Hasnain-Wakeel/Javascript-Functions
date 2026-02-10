@@ -1,13 +1,13 @@
 // // What is a Function in JavaScript ??
 
 // // A function in JavaScript is a block of code designed to perform a specific task.
-// // You can think of it like a reusable tool or a machine
+// // You can think of it like a reusable tool or a machine.
 
 // ------------------------------------
 
 // // Why use functions in JavaScript ??
 
-// // 1. Avoid repetition.
+// // 1. Avoid repetition (of code).
 // // 2. Organize code.
 // // 3. Make code reusable.
 // // 4. Improve readability and maintainability.
@@ -15,7 +15,7 @@
 
 // ------------------------------------
 
-// // How to define a function in JavaScript ??
+// // How to define a function in JavaScript ?? (ES5 Syntax) :
 
 // function functionName() {
 //      //  Function Code / Function Body / Function Scope
@@ -43,6 +43,8 @@
 // let minutes = today.getMinutes();
 // console.log(`Current time is ${hours}:${minutes}`);
 
+// And every time we want to get the current time, we have to write this code again and again.
+
 // -----  Through Function / Short Way : ------
 
 // function showTime() {
@@ -54,39 +56,47 @@
 
 // showTime();
 // showTime();
-// showTime();            // Calls it anywhere, anytime easily in the code.
+// showTime();            // Calls it anywhere, anytime, easily in the code.
 
 // ------------------------
 
 // function greetUser() {
-//   console.log("Greet Function is Invoked =>");
+//   console.log("Greet Function is Invoked !");
 //   console.log("We are Greeting You !");
 // }
 // greetUser();
 
 // ------------------------------------------------------------------------------------------------------
 
+
 // ----------------------------- Creating Dynamic Function : -------------------------
 
+// Simple and Dumb Function :
+
 // function sum() {
-//   console.log(5 + 10); // We created a User Defined Function which adds up '5 and 10' when we call it.
+//   console.log(5 + 10);       // We created a User Defined Function which adds up '5 and 10' when we call it.
 // }
 
-// sum(); // This function is only able to sum 5 and 10.
+// sum();           // This function is only able to sum 5 and 10.
 
-// -------------------------
 
 // ----------------- NOW, we want that we make This Function, Dynamic : ----------------
 // ------------ Our focus is that we provide '2' values every time to the function for adding them ----------
 // -------- This is possible with passing the values through Parameters and Arguments : --------
 
+
 // ------------------------------ A DYNAMIC USER-DEFINED FUNCTION : -----------------------------
 
-// function sum(a, b) {       // we pass parameters in the parenthesis of the Function.
-//   console.log(`Function Invoked => ${a + b}`);
+// function sum(a, b) {    
+//  // we passed two parameters (variables) {a and b} in the parenthesis of the Function, which receives the values.
+//   console.log("Function Invoked !");
+//   console.log(`a + b = ${a + b}`);   
+//   console.log(`Sum of ${a} and ${b} is ${a + b}`);   
+// // We used these parameters inside the function body.
 // }
 
-// sum(10, 11);  // we pass arguments in the parenthesis of the function at the time of Invocation (invoking the function).
+// sum(10, 11);  
+//  // we passed arguments (values) in the parenthesis of the function at the time of Invocation (Invoking the Function).
 // sum(21, 4);
 // sum(11, 16);
 
@@ -374,10 +384,10 @@
 // -----------------------------------------------------------------------------------------------------
 
 
-function addition(a, b){
-   return a + b;
-}
-console.log(addition(7, 10));
+// function addition(a, b){
+//    return a + b;
+// }
+// console.log(addition(7, 10));
 
 // Now, the of the 
 // Now, the above line prints the value returned by the function, which is 17.
